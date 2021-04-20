@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Client_RealtorAssistant.Models.Asset>
+
+@{
+    ViewData["Title"] = "Unsold Properties";
+}
+
+<div class="row mt-5">
+    <div class="col text-center">
+        <h2>Your Properties</h2>
+    </div>
+</div>
+<div class="row mt-5 pt-2">
+    <div class="col">
+        <h5>Filter by Property Type</h5>
+    </div>
+</div>
+<div class="row mt-1">
+    <div class="col">
+        <a asp-action="Filter_Land" class="text-primary backBtn " style="font-size: 14px; font-weight: 500;">Land</a><br />
+
+        <a asp-action="Filter_Condo" class="text-primary backBtn" style="font-size: 14px; font-weight: 500;">Condo</a> <br />
+
+        <a asp-action="Filter_Detached" class="text-primary backBtn " style="font-size: 14px; font-weight: 500;">Detached</a> <br />
+
+        <a asp-action="Filter_SemiDetached" class="text-primary backBtn " style="font-size: 14px; font-weight: 500;">Semi-Detached</a> <br />
+
+        <a asp-action="Filter_PentHouse" class="text-primary backBtn " style="font-size: 14px; font-weight: 500;">Penthouse</a> <br />
+    </div>
+</div>
+<table class="table my-3">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                Owned
+            </th>
+            <th>
+                <!-- @Html.DisplayNameFor(model => model.isSold) -->
+                Sold
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.isOwned)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.isSold)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="crudBtn" style="font-size: 12px; font-weight: 500;">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="crudBtn mx-1" style="font-size: 12px; font-weight: 500;">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="crudBtn" style="font-size: 12px; font-weight: 500;">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

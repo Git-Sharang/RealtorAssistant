@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Realtor's Assistant</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/UserDefined.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white mb-3">
+            <a class="navbar-brand" href="~/Assets/AssetIndex">
+                <img src="~/img/logoSVG.svg" width="80" height="70" class="d-inline-block align-top ml-2" alt="logo" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item mx-3">
+                        <a asp-action="Create" class="navbarText">Add Property</a>
+                    </li>
+                    <li class="nav-item ml-1">
+                        <a asp-action="SoldProperties" class="navbarText">
+                            <!--    <input type="button" class="btn btn-primary" value="View Sold Properties" /> -->
+                            Sold Properties
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a asp-action="Logout" class="mr-2 logoutBtn">
+                <!-- <input type="button" class="btn btn-primary" value="Log Out" /> -->
+                LOGOUT
+            </a>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <!--
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Realtor's Assistant
+        </div>
+    </footer>
+        -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

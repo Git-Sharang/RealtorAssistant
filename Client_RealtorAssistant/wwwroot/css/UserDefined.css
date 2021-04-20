@@ -1,0 +1,77 @@
+﻿.navbarText {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+    .navbarText:hover {
+        color: #1976d2;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 5ms ease-in;
+    }
+
+.logoutBtn {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+    .logoutBtn:hover {
+        text-decoration: none;
+        background-color: #1976d2;
+        color: white;
+    }
+
+a.crudBtn {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 12px;
+}
+
+    a.crudBtn:hover {
+        text-decoration: none;
+        background-color: lightgrey;
+        color: black;
+    }
+
+.addPropertyCard {
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px !important;
+    border-radius: 20px !important;
+    outline: none !important;
+}
+
+.addPropertyInput{
+    border-radius: 10px;
+}
+
+    .addPropertyInput:focus {
+        outline: none;
+        box-shadow: none !important;
+        border: 1px solid lightgray !important;
+    }
+
+.backBtn {
+    text-decoration: none;
+}
+
+.backBtn:hover {
+    text-decoration: none;
+}
